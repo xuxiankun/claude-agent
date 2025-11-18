@@ -8,12 +8,22 @@ daytona = Daytona(config)
 
 # Create the Sandbox instance
 sandbox = daytona.create()
-
+sandbox.git.clone("https://github.com/xuxiankun/claude-agent", branch="main", path="workspace")
 # Run the code securely inside the Sandbox
-response = sandbox.process.code_run('print("Hello World from code!")')
+
+response = sandbox.process.exec('npm install -g @anthropic-ai/claude-code')
 if response.exit_code != 0:
   print(f"Error: {response.exit_code} {response.result}")
 else:
-    print(response.result)
-sandbox.delete()
+  print(response.result)
+response = sandbox.process.exec('cd workspace && pip install -e .')
+if response.exit_code != 0:
+  print(f"Error: {response.exit_code} {response.result}")
+else:
+  print(response.result)
+response = sandbox.process.exec('cd workspace && python src/quick_start.py')
+if response.exit_code != 0:
+  print(f"Error: {response.exit_code} {response.result}")
+else:
+  print(response.result)
   
