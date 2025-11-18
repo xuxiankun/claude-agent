@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+src/claude_agent.egg-info/PKG-INFO
+src/claude_agent.egg-info/SOURCES.txt
+src/claude_agent.egg-info/dependency_links.txt
+src/claude_agent.egg-info/requires.txt
+src/claude_agent.egg-info/top_level.txt

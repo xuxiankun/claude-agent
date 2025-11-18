@@ -1,0 +1,25 @@
+Metadata-Version: 2.4
+Name: claude-agent
+Version: 0.1.0
+Summary: AI-powered development assistant
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: claude-agent-sdk
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0.0; extra == "dev"
+Requires-Dist: pytest-asyncio>=0.21.0; extra == "dev"
+Requires-Dist: black>=23.0.0; extra == "dev"
+Requires-Dist: isort>=5.12.0; extra == "dev"
+Requires-Dist: mypy>=1.0.0; extra == "dev"
+
+# Claude Agent Project
+
+## Setup
+
+To work on this project, make sure to activate the conda environment:
+
+```bash
+conda activate claude
+```
+
+This environment includes Python 3.12 and all necessary dependencies for the Claude Agent project.
